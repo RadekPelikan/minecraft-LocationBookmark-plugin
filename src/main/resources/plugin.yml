@@ -1,0 +1,18 @@
+name: LocationBookmark
+version: '${project.version}'
+main: org.locationbookmark.LocationBookmark
+author: 'Mert Sabinov'
+api-version: '1.20'
+commands:
+  sv:
+    description: 'Save your location'
+    usage: /sv <name>
+  goto:
+    description: 'Go to your saved location'
+    usage: /goto <name>
+  rmloc:
+    description: 'Remove your saved location'
+    usage: /rmloc <name>
+  loclist:
+    description: 'List your saved locations'
+    usage: /loclist

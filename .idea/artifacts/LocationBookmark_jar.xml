@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="LocationBookmark:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/LocationBookmark_jar</output-path>
+    <root id="archive" name="LocationBookmark.jar">
+      <element id="module-output" name="LocationBookmark" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/main/resources/plugin.yml" />
+    </root>
+  </artifact>
+</component>
