@@ -4,15 +4,29 @@ main: org.locationbookmark.LocationBookmark
 author: 'Mert Sabinov'
 api-version: '1.20'
 commands:
-  sv:
-    description: 'Save your location'
-    usage: /sv <name>
-  goto:
-    description: 'Go to your saved location'
-    usage: /goto <name>
-  rmloc:
-    description: 'Remove your saved location'
-    usage: /rmloc <name>
-  loclist:
-    description: 'List your saved locations'
-    usage: /loclist
+  ${root_command}:
+    description: list saved locations
+    usage: /<command>
+    subcommands:
+      list:
+        description: list player's saved locations
+        usage: /<command> list
+        subcommands:
+          <group>:
+            description: List player's saved locations under <group> group
+            usage: /<command> list <group>
+      rename:
+        description: rename player's saved location
+        usage: /<command> rename
+      remove:
+        description: Remove player's saved location
+      tp:
+        description: Teleport to player's saved location
+        usage: /<command> tp <name>
+      <name>:
+        description: Save player's current location
+        usage: /<command> <name>
+        subcommands:
+          <coordinate>:
+            description: Save set coordinates to player's location
+            usage: /<command> <name> <cordX> <cordY> <cordZ>
