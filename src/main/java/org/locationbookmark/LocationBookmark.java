@@ -1,20 +1,26 @@
 package org.locationbookmark;
 
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.locationbookmark.Commands.GOTO;
 import org.locationbookmark.Commands.LOCLIST;
 import org.locationbookmark.Commands.RMLOC;
 import org.locationbookmark.Commands.SV;
+import org.locationbookmark.Config.Config;
 
 public final class LocationBookmark extends JavaPlugin {
+
+    private Config config;
 
     @Override
     public void onEnable() {
         // Plugin startup logic
-        DB.connect();
+        DB.initialize();
+        setupConfig();
         registerCommands();
+    }
+
+    private void setupConfig() {
+        config = new Config(this);
     }
 
     private void registerCommands() {
@@ -22,11 +28,6 @@ public final class LocationBookmark extends JavaPlugin {
         getCommand("goto").setExecutor(new GOTO());
         getCommand("rmloc").setExecutor(new RMLOC());
         getCommand("locList").setExecutor(new LOCLIST());
-    }
-
-    @Override
-    public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-        return false;
     }
 
 

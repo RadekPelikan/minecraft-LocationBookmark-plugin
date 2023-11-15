@@ -14,7 +14,7 @@ public class LOCLIST implements CommandExecutor {
             Player player = (Player) sender;
             sender.sendMessage(ChatColor.YELLOW + "Your locations:");
             for(Location location : org.locationbookmark.DB.getAllLocations(player.getDisplayName())) {
-                sender.sendMessage(ChatColor.YELLOW + "  " + location.getLocationName() + " at " + location.getX() + ", " + location.getY() + ", " + location.getZ());
+                sender.sendMessage(ChatColor.YELLOW + "  " + location.getName() + " at " + location.getX() + ", " + location.getY() + ", " + location.getZ());
             }
         } else {
             sender.sendMessage(ChatColor.RED + "Invalid command");
