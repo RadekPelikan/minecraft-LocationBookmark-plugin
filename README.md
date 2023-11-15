@@ -41,3 +41,9 @@ The Minecraft Location Bookmark Plugin is a utility for Minecraft servers that a
 The source code of this project is licensed under the [MIT License](LICENSE).
 
 If you have any questions or issues, please create a GitHub issue.
+
+
+#### Resources
+
+- [Multiple Homes](https://github.com/Echo24h/MultipleHomes)
+- [User Login](https://github.com/ElCholoGamer/userlogin)
